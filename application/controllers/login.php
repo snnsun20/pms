@@ -23,21 +23,20 @@ class login extends CI_Controller {
 	    if ($this->input->post('do_login')) {
 
 				$user = $this->login_model->getname($this->input->post('username'));
-		
 				if ($user) {
           
 					if ($this->input->post('password') == $user) {
 						redirect(site_url('home'));
 				
 					} else {
-
+						$msg = 'Invalid Username or Password';
 						$this->session->set_flashdata('error', 'Invalid Username or Password');
 				      	redirect('login/home');
 					       
 					}
 				} else {
-
-				    $msg=  $this->session->set_flashdata('error', 'Invalid Username or Password');
+					$msg = 'Invalid Username or Password';
+				    $this->session->set_flashdata('error', 'Invalid Username or Password');
 					redirect('login/home'.$msg);
 				}
 			
