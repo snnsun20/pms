@@ -61,6 +61,7 @@ class home extends CI_Controller {
                 $db['keyword'] = $this->input->post('keyword');
                 $db['person_name_assign'] = $this->input->post('pna');
                 $db['person_name_update'] = $this->input->post('pnu');
+				$db['comments'] = $this->input->post('comments');
          
                 $id = $this->login_model->update($id,$db);
                 $this->session->set_flashdata('success', 'Information Added successfully ');
