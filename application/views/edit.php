@@ -16,6 +16,8 @@
 <tr><td>Keywords</td><td><input type="text"  name="keyword"  id="keyword"  value="<?php echo  $data->keyword; ?>"  ></td></tr>
 <tr><td>Person name(assigned)</td><td><input type="text"  name="pna"  id="pna"  value="<?php echo  $data->person_name_assign; ?>" ></td></tr>
 <tr><td>Person name(updated)</td><td><input type="text"  name="pnu"  id="pnu" value="<?php echo  $data->person_name_update; ?>" ></td></tr>
+<tr><td>Comments</td><td><input type="text"  name="comments"  id="comments" value="<?php echo  $data->comments; ?>" ></td></tr>
+<tr><td>Status</td><td><input type="text"  name="status"  id="status" value="<?php echo  $data->status; ?>" ></td></tr>
 <tr><td></td><td><input type="submit"  name="do_edit_info"  id="do_edit_info"   value="Submit"/></td></tr>
 </table>
 </form>
